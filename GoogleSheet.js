@@ -29,33 +29,32 @@ form.addEventListener('submit', e => {
         });
     });
 //service
-    document.addEventListener('DOMContentLoaded', function() {
-        const serviceLink = document.getElementById('serviceLink');  // Corrected to match the actual link ID
+document.addEventListener('DOMContentLoaded', function() {
+    // Array of link and section pairs
+    const scrollLinks = [
+        { linkId: 'serviceLink', sectionId: 'service' },
+        { linkId: 'abo', sectionId: 'about' },
+        { linkId: 'ccc', sectionId: 'contact' }
+    ];
+
+    // Loop through each link-section pair and add the smooth scroll behavior
+    scrollLinks.forEach(item => {
+        const link = document.getElementById(item.linkId);
         
-        serviceLink.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevents the default anchor behavior that changes the URL
-            
-            // Find the service section
-            const serviceSection = document.getElementById('service');
-            
-            // Scroll to the service section without changing the URL
-            serviceSection.scrollIntoView({ behavior: 'smooth' });
-        });
+        if (link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();  // Prevents default anchor behavior that changes the URL
+                
+                const section = document.getElementById(item.sectionId);
+                
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
     });
-//about
-     document.addEventListener('DOMContentLoaded', function() {
-        const serviceLink = document.getElementById('abo');  // Corrected to match the actual link ID
-        
-        serviceLink.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevents the default anchor behavior that changes the URL
-            
-            // Find the service section
-            const serviceSection = document.getElementById('about');
-            
-            // Scroll to the service section without changing the URL
-            serviceSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
+});
+
 
 // window.onload = function () {
 //   const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3lkSqfLVcQyU--SDAbbkXYJO8f1mioynM5FBQubG42OsqOt9bUyTAw4OB0B9H3Lr/exec';
