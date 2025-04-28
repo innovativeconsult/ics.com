@@ -15,20 +15,19 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message));
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const homeLink = document.getElementById('homeLink');
-    
-    homeLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default anchor link behavior (which changes the URL)
+   document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('homeLink');
         
-        // Scroll to the home section manually
-        const homeSection = document.getElementById('home');
-        
-        // Smooth scroll to the home section
-        homeSection.scrollIntoView({ behavior: 'smooth' });
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const homeSection = document.getElementById('home');
+            
+            // Scroll to the home section without changing the URL
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-});
-
 
 
 // window.onload = function () {
