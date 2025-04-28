@@ -15,15 +15,7 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message));
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const homeLink = document.querySelector('a[href="#home"]');
-  const homeSection = document.getElementById('home');
 
-  homeLink.addEventListener('click', function(event) {
-    event.preventDefault();  // Prevent scrolling
-    homeSection.style.display = 'none';  // Hide the section
-  });
-});
 
 
 
