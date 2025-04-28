@@ -29,7 +29,19 @@ form.addEventListener('submit', e => {
         });
     });
 //service
+  const serviceLink = document.getElementById('serviceLink');
+  const serviceSection = document.getElementById('service');
 
+  // Add a click event listener to the link
+  serviceLink.addEventListener('click', function(event) {
+    // Prevent the default behavior (which changes the URL)
+    event.preventDefault();
+    
+    // Scroll to the service section
+    serviceSection.scrollIntoView({
+      behavior: 'smooth' // Smooth scroll (optional)
+    });
+  });
 
 
 // window.onload = function () {
