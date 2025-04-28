@@ -29,17 +29,17 @@ form.addEventListener('submit', e => {
         });
     });
 //service
-   document.addEventListener('DOMContentLoaded', function() {
-        const homeLink = document.getElementById('serviceLink');
+    document.addEventListener('DOMContentLoaded', function() {
+        const serviceLink = document.getElementById('serviceLink');  // Corrected to match the actual link ID
         
-        homeLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevents the default behavior of changing the URL
+        serviceLink.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevents the default anchor behavior that changes the URL
             
-            // Find the home section
-            const homeSection = document.getElementById('service');
+            // Find the service section
+            const serviceSection = document.getElementById('service');
             
-            // Scroll to the home section without changing the URL
-            homeSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the service section without changing the URL
+            serviceSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
