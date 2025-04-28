@@ -15,6 +15,13 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message));
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const homeLink = document.querySelector('a[href="#home"]');
+  homeLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default scrolling behavior
+  });
+});
+
 
 // window.onload = function () {
 //   const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3lkSqfLVcQyU--SDAbbkXYJO8f1mioynM5FBQubG42OsqOt9bUyTAw4OB0B9H3Lr/exec';
