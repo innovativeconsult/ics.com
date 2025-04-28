@@ -42,8 +42,34 @@ form.addEventListener('submit', e => {
             serviceSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-
-
+   //about
+   document.addEventListener('DOMContentLoaded', function() {
+        const aboutLink = document.getElementById('abo');
+        
+        aboutLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const aboutSection = document.getElementById('about');
+            
+            // Scroll to the home section without changing the URL
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+//contact
+   document.addEventListener('DOMContentLoaded', function() {
+        const contactLink = document.getElementById('ccc');
+        
+        contactLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const contactSection = document.getElementById('contact');
+            
+            // Scroll to the home section without changing the URL
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 // window.onload = function () {
 //   const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3lkSqfLVcQyU--SDAbbkXYJO8f1mioynM5FBQubG42OsqOt9bUyTAw4OB0B9H3Lr/exec';
 //   const form = document.forms['contact-form'];
