@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const homeLink = document.getElementById('homeLink');
     
     homeLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default anchor link behavior
+        event.preventDefault(); // Prevent the default anchor link behavior (which changes the URL)
         
         // Scroll to the home section manually
         const homeSection = document.getElementById('home');
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         homeSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
-
 
 
 
