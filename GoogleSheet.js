@@ -28,7 +28,48 @@ form.addEventListener('submit', e => {
             homeSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-
+//services
+   document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('tata');
+        
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const homeSection = document.getElementById('services');
+            
+            // Scroll to the home section without changing the URL
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+//about
+   document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('abo');
+        
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const homeSection = document.getElementById('about');
+            
+            // Scroll to the home section without changing the URL
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+//contact
+   document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('con');
+        
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const homeSection = document.getElementById('contact');
+            
+            // Scroll to the home section without changing the URL
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 
 // window.onload = function () {
 //   const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3lkSqfLVcQyU--SDAbbkXYJO8f1mioynM5FBQubG42OsqOt9bUyTAw4OB0B9H3Lr/exec';
