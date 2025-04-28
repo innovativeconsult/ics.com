@@ -36,10 +36,10 @@ form.addEventListener('submit', e => {
             event.preventDefault(); // Prevents the default behavior of changing the URL
             
             // Find the home section
-            const homeSection = document.getElementById('service');
+          //  const homeSection = document.getElementById('service');
             
             // Scroll to the home section without changing the URL
-            homeSection.scrollIntoView({ behavior: 'smooth' });
+           // homeSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
 //about
