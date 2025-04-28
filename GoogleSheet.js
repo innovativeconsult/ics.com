@@ -29,31 +29,19 @@ form.addEventListener('submit', e => {
         });
     });
 //service
-document.addEventListener('DOMContentLoaded', function() {
-    // Array of link and section pairs
-    const scrollLinks = [
-        { linkId: 'serviceLink', sectionId: 'service' },
-        { linkId: 'abo', sectionId: 'about' },
-        { linkId: 'ccc', sectionId: 'contact' }
-    ];
-
-    // Loop through each link-section pair and add the smooth scroll behavior
-    scrollLinks.forEach(item => {
-        const link = document.getElementById(item.linkId);
+   document.addEventListener('DOMContentLoaded', function() {
+        const serviceLink = document.getElementById('tata');
         
-        if (link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();  // Prevents default anchor behavior that changes the URL
-                
-                const section = document.getElementById(item.sectionId);
-                
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        }
+        serviceLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const serviceSection = document.getElementById('home');
+            
+            // Scroll to the home section without changing the URL
+            serviceSection.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-});
 
 
 // window.onload = function () {
