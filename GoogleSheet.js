@@ -36,7 +36,7 @@ form.addEventListener('submit', e => {
             event.preventDefault(); // Prevents the default behavior of changing the URL
             
             // Find the home section
-            const serviceSection = document.getElementById('home');
+            const serviceSection = document.getElementById('service');
             
             // Scroll to the home section without changing the URL
             serviceSection.scrollIntoView({ behavior: 'smooth' });
