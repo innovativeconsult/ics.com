@@ -30,7 +30,7 @@ form.addEventListener('submit', e => {
     });
 //service
    document.addEventListener('DOMContentLoaded', function() {
-        const serviceLink = document.getElementById('tata');
+        const serviceLink = document.getElementById('serviceLink');
         
         serviceLink.addEventListener('click', function(event) {
             event.preventDefault(); // Prevents the default behavior of changing the URL
