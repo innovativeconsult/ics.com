@@ -29,20 +29,19 @@ form.addEventListener('submit', e => {
         });
     });
 //service
-  const serviceLink = document.getElementById('serviceLink');
-  const serviceSection = document.getElementById('service');
-
-  // Add a click event listener to the link
-  serviceLink.addEventListener('click', function(event) {
-    // Prevent the default behavior (which changes the URL)
-    event.preventDefault();
-    
-    // Scroll to the service section
-    serviceSection.scrollIntoView({
-      behavior: 'smooth' // Smooth scroll (optional)
+   document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('serviceLink');
+        
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default behavior of changing the URL
+            
+            // Find the home section
+            const homeSection = document.getElementById('service');
+            
+            // Scroll to the home section without changing the URL
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
     });
-  });
-
 
 // window.onload = function () {
 //   const scriptURL = 'https://script.google.com/macros/s/AKfycbwC3lkSqfLVcQyU--SDAbbkXYJO8f1mioynM5FBQubG42OsqOt9bUyTAw4OB0B9H3Lr/exec';
