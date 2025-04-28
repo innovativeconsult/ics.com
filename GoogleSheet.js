@@ -17,10 +17,14 @@ form.addEventListener('submit', e => {
 
 document.addEventListener('DOMContentLoaded', function() {
   const homeLink = document.querySelector('a[href="#home"]');
+  const homeSection = document.getElementById('home');
+
   homeLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default scrolling behavior
+    event.preventDefault();  // Prevent scrolling
+    homeSection.style.display = 'none';  // Hide the section
   });
 });
+
 
 
 // window.onload = function () {
